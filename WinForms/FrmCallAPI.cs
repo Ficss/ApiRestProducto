@@ -25,6 +25,12 @@ namespace WinForms
 
         private async void FrmCallAPI_Load(object sender, EventArgs e)
         {
+            //var response = await RestHelper.GetAll("subcategoria");
+            //List<Subcategoria> lst = JsonConvert.DeserializeObject<List<Subcategoria>>(response);
+            //foreach (Subcategoria subcat in lst)
+            //{
+            //    cbSubCat.Items.Add(new ListItem { Text = subcat.Nombre, Value = subcat.Id.ToString() });
+            //}
         }
 
         private async Task<string> GetHttp()
@@ -38,27 +44,25 @@ namespace WinForms
         private async void button1_Click(object sender, EventArgs e)
         {
             var response = await RestHelper.GetAll("subcategoria");
-
-            //string respuesta = await GetHttp();
             List<Subcategoria> lst = JsonConvert.DeserializeObject<List<Subcategoria>>(response);
             dataGridView1.DataSource = lst;
         }
 
         private async void button2_Click(object sender, EventArgs e)
         {
-            string id = textBox1.Text;
+
+            int id = int.Parse(txtId.Text);
             var response = await RestHelper.GetId("subcategoria", id);
 
-            //string respuesta = await GetHttp();
             Subcategoria model = JsonConvert.DeserializeObject<Subcategoria>(response);
 
-
-            dataGridView1.DataSource = model;
+            txtNombreSubCat.Text = model.Nombre;
+            
         }
 
         private async void button3_Click(object sender, EventArgs e)
         {
-            var response = await RestHelper.Post("subcategoria",textBox2.Text);
+            var response = await RestHelper.Post("subcategoria",txtNombreSubCat.Text);
             List<Subcategoria> lst = JsonConvert.DeserializeObject<List<Subcategoria>>(response);
             dataGridView1.DataSource = lst;
         }

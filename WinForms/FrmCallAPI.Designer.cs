@@ -35,16 +35,16 @@ namespace WinForms
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtNombreSubCat = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -96,11 +96,11 @@ namespace WinForms
             // 
             // tabPage4
             // 
-            this.tabPage4.Controls.Add(this.comboBox1);
             this.tabPage4.Controls.Add(this.label2);
             this.tabPage4.Controls.Add(this.label3);
             this.tabPage4.Controls.Add(this.label1);
-            this.tabPage4.Controls.Add(this.textBox2);
+            this.tabPage4.Controls.Add(this.txtId);
+            this.tabPage4.Controls.Add(this.txtNombreSubCat);
             this.tabPage4.Controls.Add(this.button5);
             this.tabPage4.Controls.Add(this.button4);
             this.tabPage4.Controls.Add(this.button3);
@@ -125,6 +125,15 @@ namespace WinForms
             this.label2.TabIndex = 4;
             this.label2.Text = "Nombre subcategoria";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(53, 139);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(181, 20);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Registro de subcategorias";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -134,12 +143,12 @@ namespace WinForms
             this.label1.TabIndex = 4;
             this.label1.Text = "Subcategoria";
             // 
-            // textBox2
+            // txtNombreSubCat
             // 
-            this.textBox2.Location = new System.Drawing.Point(821, 348);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 27);
-            this.textBox2.TabIndex = 3;
+            this.txtNombreSubCat.Location = new System.Drawing.Point(821, 348);
+            this.txtNombreSubCat.Name = "txtNombreSubCat";
+            this.txtNombreSubCat.Size = new System.Drawing.Size(100, 27);
+            this.txtNombreSubCat.TabIndex = 3;
             // 
             // button5
             // 
@@ -198,22 +207,12 @@ namespace WinForms
             this.dataGridView1.Size = new System.Drawing.Size(509, 299);
             this.dataGridView1.TabIndex = 1;
             // 
-            // comboBox1
+            // txtId
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(786, 235);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(135, 28);
-            this.comboBox1.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(53, 139);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(181, 20);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Registro de subcategorias";
+            this.txtId.Location = new System.Drawing.Point(786, 236);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(100, 27);
+            this.txtId.TabIndex = 3;
             // 
             // FrmCallAPI
             // 
@@ -242,13 +241,13 @@ namespace WinForms
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtNombreSubCat;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtId;
     }
 }

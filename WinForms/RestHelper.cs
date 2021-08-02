@@ -31,7 +31,7 @@ namespace WinForms
             return string.Empty;
         }
 
-        public static async Task<string> GetId(string controller, string id)
+        public static async Task<string> GetId(string controller, int id)
         {
             using (HttpClient client = new HttpClient())
             {
